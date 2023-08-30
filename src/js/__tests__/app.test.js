@@ -20,11 +20,11 @@ test.each([
     '', false,
   ],
   [
-    'fgf#$%DFG', false
+    'fgf#$%DFG', false,
   ],
   [
-    '-ffgbbdFg', false
-  ]
+    '-ffgbbdFg', false,
+  ],
 ])('check userName', (userName, expectation) => {
   const validator = new Validator(userName);
   expect(validator.validateUsername()).toEqual(expectation);
