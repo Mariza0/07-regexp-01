@@ -2,7 +2,7 @@ import Validator from '../app';
 
 test.each([
   [
-    'Drug-466_sdE', true,
+    'D_r-ug-466_sd677E', true,
   ],
   [
     '2Drug', false,
@@ -19,6 +19,12 @@ test.each([
   [
     '', false,
   ],
+  [
+    'fgf#$%DFG', false
+  ],
+  [
+    '-ffgbbdFg', false
+  ]
 ])('check userName', (userName, expectation) => {
   const validator = new Validator(userName);
   expect(validator.validateUsername()).toEqual(expectation);
